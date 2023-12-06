@@ -24,7 +24,17 @@ body {
   flex-direction: column;
   background-color: #b3b3b3;
 }
+.home {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
 
+.introduction{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-size-adjust: ;
+  
+}
 .button {
   cursor: pointer;
   padding: 10px 20px;
