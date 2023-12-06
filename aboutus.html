@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="projekti.css">
+  <title></title>
+
+ <header>
+  <flexbox>
+    <div class="navbar">
+        <img src="logo2.png" alt="logo" class="logo">
+      <a href="homepage.html" class="button">Home</a>
+      <a href="2dplanpage.html" class="button button-pink">2D Plan</a>
+      <a href="3dversions.html" class="button button-blue">3D Version</a>
+      <a href="aboutus.html" class="button button-yellow">About Us</a>
+      <a href="register.html" class="button button-yellow">Login or Register</a>
+    </div>
+    </flexbox>
+  </header>
+
+</head>
+<body>
+  <div class="slideshow-container">
+    <div class="mySlides">
+      <img src="Image1.png" alt="Image 1">
+    </div>
+
+    <div class="mySlides">
+      <img src="Image2.png" alt="Image 2">
+    </div>
+
+    <div class="mySlides">
+      <img src="Image3.png" alt="Image 3">
+    </div>
+  </div>
+
+  <script>
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      const slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 2000);
+    }
+  </script>
+
+</body>
+<footer>
+    
+  <div class="footeri">
+      <div class="info"> 
+          <p> <img src="location_icon.png" alt="location"  class="check-in">    Ferizaj 70000 <br>
+             <img src="gmail_icon.png" alt="gmail" class="gmail"> uniproject.ing@gmail.com 
+         </p>
+         <p>
+             <img src="phone_icon.png" alt="phone" class="numri"> 044120415 
+            <br>
+           <img src="whatsapp_icon.png" alt="whatsapp" class="whatsapp"> +383441204
+          </p>
+         
+       </div>
+       
+      
+  </div>
+</div>
+</footer>
+</html>
