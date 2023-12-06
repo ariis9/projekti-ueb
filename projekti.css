@@ -22,6 +22,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #b3b3b3;
 }
 
 .button {
@@ -86,10 +87,11 @@ footer {
   display: none;
   width: 100%;
   transition: opacity 1s ease-in-out;
-  border: #4e4e4e;
+  border: #000000;
   border-radius: 10%;
   border-style: solid;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(10, 9, 9, 0.897)
 }
 
 img {
