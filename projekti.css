@@ -5,7 +5,7 @@
 }
 
 .navbar {
-  background-color: #4e4e4e;
+  background-color: transparent;
   width: 100%;
   padding: 10px;
   margin: 0;
@@ -18,30 +18,79 @@
   position: fixed;
   z-index: 999;
 }
-body {
+ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: #b3b3b3;
+ 
+  
+
 }
-.home {
-  display: flex;
-  justify-content: center;
-  padding-top: 5%;
+.home-content{
+  background-image: url(pictures\ used/Image2.png);
+  overflow-y: auto;
+  flex-grow: 1;
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+  text-align: center;
 }
 
-.introduction{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-size-adjust: ;
+#welcome {
+  font-size: 6.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 15%;
+  color: #FFFFFF;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Times New Roman', Times, serif;
   
 }
+#text1{
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 20%;
+  color: #FFFFFF;
+  font-family: 'Times New Roman', Times, serif;
+  opacity: 1;
+  display: none;
+  text-shadow: 2px 2px 4px black;
+  align-self: center;
+}
+.content2{
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #FFFFFF;
+  justify-content: center;
+  align-items: center;
+  padding: 20%;
+}
+.title2{
+  padding-bottom: 20%;
+}
+.text2{
+  margin-bottom: 10%;
+}
+
 .button {
   cursor: pointer;
   padding: 10px 20px;
   margin: 5px;
   text-decoration: none;
   color: #fff;
-  background-color: #4e4e4e;
+  background-color: transparent;
   border-radius: 5px;
   font-family: "Arial", sans-serif;
   font-size: 14px;
@@ -54,10 +103,13 @@ body {
   background-color: rgb(58, 58, 58);
 }
 
-.logo {
+.name {
   width: 100%;
   max-width: 200px;
   height: auto;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 footer {
@@ -86,14 +138,14 @@ footer {
   height: 20px;
 }
 
-.slideshow-container {
+/* .slideshow-container {
   max-width: 50%;
   position: relative;
   margin: auto 0;
   padding: 5%; 
-}
+} 
 
-.mySlides {
+ .mySlides {
   display: none;
   width: 100%;
   transition: opacity 1s ease-in-out;
@@ -102,7 +154,7 @@ footer {
   border-style: solid;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(10, 9, 9, 0.897)
-}
+} 
 
 img {
   display: block;
@@ -111,4 +163,4 @@ img {
   margin: 0;
   padding: 0;
 }
-
+ */
