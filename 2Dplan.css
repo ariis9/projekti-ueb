@@ -5,6 +5,7 @@
   }
   
   .navbar {
+    backdrop-filter: blur(8px);
     background-color: transparent;
     width: 100%;
     padding: 10px;
