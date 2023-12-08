@@ -23,26 +23,48 @@
 </head>
 <body>
 
-    <div class="main-content">
-      <h2 class="text1"> 3D VERSIONS</h2>
-      </div>
+  <div class="main-content">
+    <h2 class="text1"> 3D VERSIONS</h2>
+  </div>
 
-    <div class="image-container">
-      <a href="pictures used/3dplan1.jpg">
-        <img src="pictures used/3dplan1.jpg" class="image">
-      </a>
-    </div>
-    <div class="image-container">
-      <a href="pictures used/3dplan2.jpg">
-        <img src="pictures used/3dplan2.jpg" class="image">
-      </a>
-    </div>
-    <div class="image-container">
-      <a href="pictures used/3dplan3.jpg">
-        <img src="pictures used/3dplan3.jpg" class="image">
-      </a>
-    </div>
+  <!-- Image containers without anchor tags -->
+  <div class="image-container">
+    <img src="pictures used/3dplan1.jpg" class="image">
+  </div>
+  <div class="image-container">
+    <img src="pictures used/3dplan2.jpg" class="image">
+  </div>
+  <div class="image-container">
+    <img src="pictures used/3dplan3.jpg" class="image">
+  </div>
 
+  <!-- The modal for displaying larger images -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+  </div>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get all images and add click event listeners to open the modal with the clicked image
+    var images = document.querySelectorAll(".image");
+    images.forEach(function (image) {
+      image.addEventListener("click", function () {
+        modal.style.display = "block";
+        var imgSrc = this.src;
+        var modalImg = document.getElementById("img01");
+        modalImg.src = imgSrc;
+      });
+    });
+
+    // Get the close button and close the modal when clicked
+    var closeBtn = document.querySelector(".close");
+    closeBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+  </script>
 </body>
 <footer>
     
