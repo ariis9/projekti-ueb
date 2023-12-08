@@ -62,6 +62,14 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+.emailbox input[type="email"]{
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 .register-form button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -82,15 +90,23 @@
     <h2>Register</h2>
     <form class="register-form" action="/Register" method="post" onsubmit="redirectToHomepage(event)">
       <div class="form-group">
+        <div class="emailbox">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <div id="emailError" style="color: red;"></div>
+      </div>
+      <div class="form-group">
         <div class="usernamebox">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
+        <div id="usernameError" style="color: red;"></div>
       </div>
     </div>
       <div class="form-group">
         <div class="passwordbox">
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
+        <div id="passwordError" style="color: red;"></div>
       </div>
     </div>
       <div class="form-group">
@@ -101,10 +117,52 @@
   </div>
   
   <script>
-    function redirectToHomepage(event) {
-      event.preventDefault(); 
-      window.location.href = 'homepage.html';
-    }
+      document.addEventListener('DOMContentLoaded', function () {
+      let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
+      let usernameRegex = /^[a-z]{4,21}$/;
+      let passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,12}$/;
+
+      function validateForm(event){
+      event.preventDefault();
+
+      let emailInput = document.getElementById('email');
+      let emailError = document.getElementById('emailError');
+      let usernameInput = document.getElementById('username');
+      let usernameError= document.getElementById('usernameError');
+      let passwordInput = document.getElementById('password');
+      let passwordError = document.getElementById('passwordError'); 
+
+      usernameError.innerText = '';
+      passwordError.innerText = '';
+      emailError.innterText= '';
+
+        if(!emailRegex.test(emailInput.value)){
+          usernameError.innerText = 'invalid email';
+        }
+       if(!usernameRegex.test(usernameInput.value)){
+            usernameError.innerText = 'invalid name';
+         return;
+           }
+        if(!passwordRegex.test(passwordInput.value)){
+             passwordError.innerText = 'invalid password';
+        return;
+           }
+
+          emailError.innterText = '';
+          usernameError.innerText = '';
+          passwordError.innerText = '';
+
+          redirectToHomepage();
+        }
+
+       function redirectToHomepage() {
+       window.location.href = "homepage.html";
+        }        
+
+      let loginForm = document.querySelector('.register-form');
+      loginForm.addEventListener('submit', validateForm);
+
+});
   </script>
   
 
