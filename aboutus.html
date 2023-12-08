@@ -1,78 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="projekti.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,800;1,600&display=swap" rel="stylesheet">
+
   <title></title>
 
- <header>
-  <flexbox>
-    <div class="navbar">
-        <img src="pictures used/logo2.png" alt="logo" class="logo">
-      <a href="homepage.html" class="button">Home</a>
-      <a href="2dplanpage.html" class="button button-pink">2D Plan</a>
-      <a href="3dversions.html" class="button button-blue">3D Version</a>
-      <a href="aboutus.html" class="button button-yellow">About Us</a>
-      <a href="register.html" class="button button-yellow">Login or Register</a>
-    </div>
+  <header>
+    <flexbox>
+      <div class="navbar">
+        <p class="name"> UNIPROJECT</p>
+        
+        <a href="homepage.html" class="button">Home</a>
+        <a href="2dplanpage.html" class="button button-pink">2D Plan</a>
+        <a href="3dversions.html" class="button button-blue">3D Version</a>
+        <a href="aboutus.html" class="button button-yellow">About Us</a>
+        <a href="register.html" class="button button-yellow">Login or Register</a>
+      </div>
     </flexbox>
   </header>
 
 </head>
+
 <body>
-  <div class="slideshow-container">
-    <div class="mySlides">
-      <img src="pictures used/Image1.png" alt="Image 1">
-    </div>
-
-    <div class="mySlides">
-      <img src="pictures used/Image2.png" alt="Image 2">
-    </div>
-
-    <div class="mySlides">
-      <img src="pictures used/Image3.png" alt="Image 3">
-    </div>
+ 
+  <div class="home-content">
+   
+   
+      <h1 id="welcome"> Welcome to Uniproject </h1>
+        <h2 id="text1" class="hidden">
+    At Uniproject, we believe in turning dreams into spaces, and ideas into structures.</h2>
+   
   </div>
+
+    <div class="content2">
+      <h2 id="title2"> Our Vision</h2>
+      <p id="text2">  Our vision is to redefine the way we live and interact with our surroundings.
+         We envision spaces that blend form and function seamlessly, where aesthetics meet practicality, and where every design tells a unique story.</p>
+         <div class="imageBelow">
+            <img src="pictures used/Image1.jpg">
+          </div>
+    </div>
 
   <script>
 
-    let slideIndex = 0;
-    showSlides();
 
-    function showSlides() {
-      let i;
-      const slides = document.getElementsByClassName("mySlides");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {
-        slideIndex = 1;
-      }
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 2000);
-    }
+    document.addEventListener("DOMContentLoaded", function () {
+  
+  setTimeout(function () {
+    const welcomeText = document.getElementById('welcome');
+    const text1 = document.getElementById('text1');
+
+    welcomeText.style.display = 'none'; 
+    text1.style.display = 'block'; 
+  }, 3000); 
+});
+
+
+
   </script>
+
+  
 
 </body>
 <footer>
-    
+
   <div class="footeri">
-      <div class="info"> 
-          <p> <img src="pictures used/location_icon.png" alt="location"  class="check-in">    Ferizaj 70000 <br>
-             <img src="pictures used/gmail_icon.png" alt="gmail" class="gmail"> uniproject.ing@gmail.com 
-         </p>
-         <p>
-             <img src="pictures used/phone_icon.png" alt="phone" class="numri"> 044120415 
-            <br>
-           <img src="pictures used/whatsapp_icon.png" alt="whatsapp" class="whatsapp"> +383441204
-          </p>
-         
-       </div>
-       
-      
+    <div class="info">
+      <p> <img src="pictures used/location_icon.png" alt="location" class="check-in"> Ferizaj 70000 <br>
+        <img src="pictures used/gmail_icon.png" alt="gmail" class="gmail"> uniproject.ing@gmail.com
+      </p>
+      <p>
+        <img src="pictures used/phone_icon.png" alt="phone" class="numri"> 044120415
+        <br>
+        <img src="pictures used/whatsapp_icon.png" alt="whatsapp" class="whatsapp"> +383441204
+      </p>
+
+    </div>
+
+
   </div>
-</div>
+  </div>
 </footer>
+
 </html>
