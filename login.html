@@ -81,18 +81,20 @@
         class="login-form"
         action="/login"
         method="post"
-        onsubmit="redirectToHomepage(event)"
+        onsubmit="validateForm(event)"
       >
         <div class="form-group">
           <div class="usernamebox">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required />
+            <div id="usernameError" style="color: red;"></div>
           </div>
         </div>
         <div class="form-group">
           <div class="passwordbox">
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required />
+            <div id="passwordError" style="color: red;"></div>
           </div>
         </div>
         <div class="form-group">
@@ -102,10 +104,48 @@
     </div>
 
     <script>
-      function redirectToHomepage(event) {
+      // function redirectToHomepage(event) {
+      //   event.preventDefault();
+      //   window.location.href = "homepage.html";
+      // }
+      document.addEventListener('DOMContentLoaded', function () {
+
+      let usernameRegex = /^[a-z]{4,21}$/;
+      let passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,12}$/;
+
+      function validateForm(event){
         event.preventDefault();
-        window.location.href = "homepage.html";
+        let usernameInput = document.getElementById('username');
+        let usernameError= document.getElementById('usernameError');
+        let passwordInput = document.getElementById('password');
+        let passwordError = document.getElementById('passwordError');
+
+        usernameError.innerText = '';
+        passwordError.innerText = '';
+
+        if(!usernameRegex.test(usernameInput.value)){
+          usernameError.innerText = 'invalid name';
+          return;
+        }
+        if(!passwordRegex.test(passwordInput.value)){
+          passwordError.innerText = 'invalid password';
+          return;
+        }
+        usernameError.innerText = '';
+        passwordError.innerText = '';
+
+        redirectToHomepage();
       }
+      function redirectToHomepage() {
+        window.location.href = "homepage.html";
+      }        
+    
+      let loginForm = document.querySelector('.login-form');
+      loginForm.addEventListener('submit', validateForm);
+
+    });
+    
+
     </script>
   </body>
 </html>
