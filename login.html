@@ -110,8 +110,8 @@
       // }
       document.addEventListener('DOMContentLoaded', function () {
 
-      let usernameRegex = /^[a-z]{4,21}$/;
-      let passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,12}$/;
+      let usernameRegex = /^[a-z]{2,20}$/;
+      let passwordRegex = /^(?=.*[A-Z])(?=.*\d).{6,20}$/;
 
       function validateForm(event){
         event.preventDefault();

@@ -119,8 +119,8 @@
   <script>
       document.addEventListener('DOMContentLoaded', function () {
       let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
-      let usernameRegex = /^[a-z]{4,21}$/;
-      let passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,12}$/;
+      let usernameRegex = /^[a-z]{2,21}$/;
+      let passwordRegex = /^(?=.*[A-Z])(?=.*\d).{6,20}$/;
 
       function validateForm(event){
       event.preventDefault();
@@ -137,14 +137,14 @@
       emailError.innterText= '';
 
         if(!emailRegex.test(emailInput.value)){
-          usernameError.innerText = 'invalid email';
+          emailError.innerText = 'invalid email';
         }
        if(!usernameRegex.test(usernameInput.value)){
-            usernameError.innerText = 'invalid name';
+            usernameError.innerText = 'username should be 2-21 characters';
          return;
            }
         if(!passwordRegex.test(passwordInput.value)){
-             passwordError.innerText = 'invalid password';
+             passwordError.innerText = 'Password should contain at least: 1 uppercase letter, 1 number, and 6-20 characters';
         return;
            }
 
