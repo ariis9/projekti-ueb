@@ -51,12 +51,21 @@
         font-family: 'Poppins', sans-serif;
         
       }
+      .pictures{
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
       .image-container{
         display: flex;
         position: relative;
         margin: 10px;
-        overflow: hidden;
+        overflow:auto;
         width: 30%;
+        max-height: min-content;
         box-sizing: border-box;
         justify-content: space-between;
       }
