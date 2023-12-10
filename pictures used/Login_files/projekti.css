@@ -71,7 +71,9 @@
   margin-top: 10px;
   font-family: 'Poppins', sans-serif;
   color: #FFFFFF;
-  padding: 5% 20% 0% 20%;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 20%;
 }
 .content3 {
   font-size: 2rem;
@@ -79,14 +81,15 @@
   line-height: 1.5;
   font-family: 'Poppins', sans-serif;
   color: #FFFFFF;
-  padding: 5% 20% 0% 20%;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 20%;
 }
 .content3 .imageBelow img{
   width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  
 }
 
 
