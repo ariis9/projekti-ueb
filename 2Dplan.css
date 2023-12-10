@@ -58,6 +58,7 @@
         justify-content: space-evenly;
         flex-wrap: wrap;
         margin-top: 10px;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
       }
 
       .image-container{
@@ -70,6 +71,7 @@
         box-sizing: border-box;
         justify-content: space-between;
         border-radius: 10%;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
       }
 
       .image {
@@ -78,6 +80,7 @@
         max-width: 100%;
         transition: 0.3s;
         cursor: pointer;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
       }
 
       .modal {
